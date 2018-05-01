@@ -21,7 +21,7 @@ app.use(morgan('dev'));
 apiRoutes(app,db);
 
 db.sequelize.sync({
-    // force:true
+    force:true
 }).then(function(){
     app.listen(PORT, function(){
         console.log(`Listening on port ${PORT}`);
