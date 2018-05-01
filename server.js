@@ -20,14 +20,14 @@ app.use(morgan('dev'));
 //api routes
 apiRoutes(app,db);
 
-db.sequelize.sync({
-    // force:true
-}).then(function(){
-    app.listen(PORT, function(){
-        console.log(`Listening on port ${PORT}`);
-    });
-});
+// db.sequelize.sync({
+//     // force:true
+// }).then(function(){
+// });
 
+app.listen(PORT, function(){
+    console.log(`Listening on port ${PORT}`);
+});
 // SEEDING THE DB WITH DATA
 // db.sequelize.models.Patient.build({
 //     user_name:'nice one',
