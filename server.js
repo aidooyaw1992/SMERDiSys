@@ -3,8 +3,8 @@ var app=express();
 var bodyParser=require('body-parser');
 var db=require('./models');
 var apiRoutes=require('./app/routes/apiRoutes.js');
-// var PORT=process.env.PORT||3000;
-var PORT=process.env.PORT||80;
+var PORT=process.env.PORT||3000;
+// var PORT=process.env.PORT||80;
 var path=require('path');
 var morgan=require('morgan');
 
@@ -36,15 +36,15 @@ db.sequelize.sync({
 //     complaint:'sick of Malaria',
 //     care_taker_contact:'0244123456',
 //     contact:'0501123456',
-//     // PharmacistId: 2,
-//     // DispenserId: 2,
-//     // DrugId: 1 
+//     PharmacistId: 1,
+//     DispenserId: 1,
+//     DrugId: 1 
 //  },
-// //  {include:[
-// //     db.sequelize.models.Pharmacist,
-// //     db.sequelize.models.Dispenser,
-// //     db.sequelize.models.Drug,
-// //     ]}
+//  {include:[
+//     db.sequelize.models.Pharmacist,
+//     db.sequelize.models.Dispenser,
+//     db.sequelize.models.Drug,
+//     ]}
 
 // ).save();
 
@@ -79,7 +79,7 @@ db.sequelize.sync({
 //  },
 //  {include:[
 //     db.sequelize.models.Pharmacist,
- // db.sequelize.models.Drug,
+//     // db.sequelize.models.Drug,
 //     ]}
 
 // ).save();

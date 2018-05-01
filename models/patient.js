@@ -7,6 +7,7 @@ module.exports=function(sequelize,DataTypes){
         contact:DataTypes.INTEGER,
         complaint:DataTypes.TEXT,
         care_taker_contact: DataTypes.INTEGER,
+        prescription_time:DataTypes.TEXT,
     });
 
     return Patient;
