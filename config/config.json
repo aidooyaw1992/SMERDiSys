@@ -7,10 +7,10 @@
     "dialect": "sqlite"
   },
   "test": {
-    "username": "sql2235084",
-    "password":  "wii7fw6b",
-    "database": "sql2235084",
-    "host": "sql2.freemysqlhosting.net",
+    "username": "root",
+    "password":  "",
+    "database": "database_test",
+    "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false
   },
