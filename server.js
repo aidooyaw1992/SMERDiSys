@@ -3,8 +3,8 @@ var app=express();
 var bodyParser=require('body-parser');
 var db=require('./models');
 var apiRoutes=require('./app/routes/apiRoutes.js');
-var PORT=process.env.PORT||3000;
-// var PORT=process.env.PORT||80;
+// var PORT=process.env.PORT||3000;
+var PORT=process.env.PORT||80;
 var path=require('path');
 var morgan=require('morgan');
 
