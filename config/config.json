@@ -7,10 +7,10 @@
     "dialect": "sqlite"
   },
   "test": {
-    "username": "process.env.username",
-    "password":  "process.env.password",
-    "database": "process.env.database",
-    "host": "process.env.host",
+    "username": "sql2235084",
+    "password":  "wii7fw6b",
+    "database": "sql2235084",
+    "host": "sql2.freemysqlhosting.net",
     "dialect": "mysql",
     "operatorsAliases": false
   },
