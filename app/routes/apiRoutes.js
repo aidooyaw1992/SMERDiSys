@@ -31,11 +31,9 @@ app.get('/', function(req, res){
             user_name:req.body.user_name,
             contact:req.body.contact,    
             complaint:req.body.complaint,
+            prescription_time:req.body.prescription_time,
             care_taker_contact:req.body.care_taker_contact,  
-            // Image:{
-            //     image_name:req.body.Image.image_name,
-            //     url:req.body.Image.url,                
-            // }                           
+                                   
         },
         // {include:[db.Image]}
         ).then(function(result){
@@ -58,6 +56,7 @@ app.get('/', function(req, res){
             user_name:req.body.user_name,
             contact:req.body.contact,    
             complaint:req.body.complaint,
+            prescription_time:req.body.prescription_time,
             care_taker_contact:req.body.care_taker_contact,  
             // Image:{
             //     image_name:req.body.Image.image_name,
@@ -108,8 +107,8 @@ app.get('/api/dispenser/:id', function(req,res){
 app.post('/api/dispenser/add', function(req,res){
     
     db.Dispenser.create({
-        first_name:req.body.first_name,
-        last_name:req.body.last_name,                       
+        device_name:req.body.device_name,
+        dispenser_number:req.body.dispenser_number,                       
     },
     // {include:[db.Image]}
     ).then(function(result){
@@ -127,8 +126,8 @@ app.post('/api/dispenser/add', function(req,res){
 //PUT
 app.put('/api/dispenser/update/:id', function(req,res){
     db.Dispenser.create({
-        first_name:req.body.first_name,
-        last_name:req.body.last_name,
+        device_name:req.body.device_name,
+        dispenser_number:req.body.dispenser_number,
     },
     // {include:[db.Image]},
     {
@@ -174,8 +173,10 @@ app.get('/api/pharmacist/:id', function(req,res){
 app.post('/api/pharmacist/add', function(req,res){
     
     db.Pharmacist.create({
+        user_name:req.body.user_name,
         first_name:req.body.first_name,
         last_name:req.body.last_name,
+        pin:req.body.pin
                        
     },
     // {include:[db.Image]}
@@ -194,8 +195,10 @@ app.post('/api/pharmacist/add', function(req,res){
 //PUT
 app.put('/api/pharmacist/update/:id', function(req,res){
     db.Pharmacist.create({
+        user_name:req.body.user_name,
         first_name:req.body.first_name,
         last_name:req.body.last_name,
+        pin:req.body.pin
                               
     },
     // {include:[db.Image]},
@@ -242,8 +245,10 @@ app.get('/api/drug/:id', function(req,res){
 app.post('/api/drug/add', function(req,res){
     
     db.Drug.create({
-        first_name:req.body.first_name,
-        last_name:req.body.last_name,
+        name:req.body.name,
+        manufacturer:req.body.manufacturer,
+        quantity: req.body.quantity,
+        expiry_date:req.body.expiry_date
                        
     },
     // {include:[db.Image]}
@@ -262,8 +267,10 @@ app.post('/api/drug/add', function(req,res){
 //PUT
 app.put('/api/drug/update/:id', function(req,res){
     db.Drug.create({
-        first_name:req.body.first_name,
-        last_name:req.body.last_name,
+        name:req.body.name,
+        manufacturer:req.body.manufacturer,
+        quantity: req.body.quantity,
+        expiry_date:req.body.expiry_date
                               
     },
     // {include:[db.Image]},
