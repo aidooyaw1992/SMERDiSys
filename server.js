@@ -35,6 +35,7 @@ db.sequelize.sync({
 //     last_name:'Aidoo',
 //     complaint:'sick of Malaria',
 //     care_taker_contact:'0244123456',
+//     prescription_time:'6:00pm',
 //     contact:'0501123456',
 //     PharmacistId: 1,
 //     DispenserId: 1,
@@ -56,9 +57,10 @@ db.sequelize.sync({
 //     complaint:'Flu',
 //     care_taker_contact:'0244123456',
 //     contact:'0501123456',
+//     prescription_time:'6:00pm',
 //     PharmacistId: 1,
 //     DispenserId: 1,
-//     Drug: {name:'Pro Cold', manufacturer: 'CONCEPT PHARMA', quantity: 2, time_of_intake: '6:00' }
+//     Drug: {name:'Pro Cold', manufacturer: 'CONCEPT PHARMA', quantity: 2 }
 //  },
 //  {include:[
 //     db.sequelize.models.Pharmacist,
@@ -72,14 +74,11 @@ db.sequelize.sync({
 // // SEEDING THE DB WITH DATA
 // db.sequelize.models.Dispenser.build({
 //     dispenser_number: 22,
-//     user_name: 'hopins',
-//     first_name:'Michael',
-//     last_name:'Newman',
+//     device_name:'Disp_A',
 //     PharmacistId: 1,
 //  },
 //  {include:[
-//     db.sequelize.models.Pharmacist,
-//     // db.sequelize.models.Drug,
+//     db.sequelize.models.Pharmacist
 //     ]}
 
 // ).save();
@@ -93,6 +92,16 @@ db.sequelize.sync({
 
 // ).save();
 
+// // // SEEDING THE DB WITH DATA
+// db.sequelize.models.Drug.build({
+//     name:'Pro Cold',
+//     manufacturer:'Pro Cold Pharma',
+//     quantity: 2,
+//     expiry_date:'16/02/2018'
+//  },
+
+
+// ).save();
 
 
 
