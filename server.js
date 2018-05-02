@@ -30,7 +30,7 @@ db.sequelize.sync({
 
 // SEEDING THE DB WITH DATA
 // db.sequelize.models.Patient.build({
-//     user_name:'nice one',
+//     user_name:'nice_one',
 //     first_name:'Junior',
 //     last_name:'Aidoo',
 //     complaint:'sick of Malaria',
